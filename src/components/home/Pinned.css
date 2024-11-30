@@ -1,0 +1,78 @@
+/* Pinned.css */
+.pinned {
+    background-color: rgb(var(--primary));
+    background: #000;
+    height: 400vh;
+    position: relative;
+}
+
+.pinned-div {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate; /* Add this to create a new stacking context */
+    overflow: hidden;
+}
+
+.widening-div {
+    width: 96vw;
+    height: 96vh;
+    background: #000;
+    background-color: rgb(var(--primary));
+    position: absolute;
+    margin: 2vh 2vw;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure proper stacking */
+}
+
+.pinned-para {
+    color: rgb(var(--accent)); /* Change to white */
+    font-size: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20vw;
+    position: relative;
+    z-index: 2; /* Higher than widening-div */
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    mix-blend-mode: difference;
+}
+
+.pin-char {
+    display: none; /* Start with display none */
+    font-weight: bold; /* Add bold to make the difference more visible */
+}
+
+/* Add a wrapper for the blend mode */
+.blend-wrapper {
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: difference;
+    z-index: 3;
+}
+
+@media (max-width: 768px){
+    .pinned-para{
+        font-size: 28px;
+
+    }
+    .pinned{
+        height: 250vh;
+    }
+}
+
+
+@media (max-width: 420px){
+    .widening-div{
+        height: 60vh;
+        margin: 20vh 3vw;
+    }
+}

@@ -1,0 +1,230 @@
+div{
+    /* border: 1px solid black; */
+}
+.right-scroller{
+    /* height: 200vh; */
+    background-color: rgb(var(--primary));
+    overflow: hidden;
+
+}
+.right-scroller-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340vw;
+    gap: 10vw;
+}
+
+.right-scroller-container > div{
+    height: 100vh;
+
+    /* background-color: black;
+    color: white;
+    border: 1px solid white; */
+
+}
+
+.scroll-div-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.scroll-1-img > img{
+    height: 95vh;
+}
+
+.scroll-1-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+}
+
+.scroll-1-top{
+    font-size: 5vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+.scroll-1-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    
+}
+
+.scroll-1-bottom > img{
+    height: 40vh;
+}
+
+.scroll-1-bottom > p{
+    width: 40%;
+}
+
+.scroll-div-2{
+    width: 120vw;
+}
+
+.scroll-2-top{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.scroll-2-top > img{
+    height: 100%;
+    width: 40vh;
+}
+
+.scroll-div-3{
+    width: 100vw;
+}
+
+.scroll-2-top > .vr{
+    height: auto;
+}
+
+.scroll-2-btm{
+    font-size: 6vh;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 7vh;
+    text-align: right;
+    padding-right: 10vw;
+}
+
+
+.scroll-div-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll-3-left > img{
+    height: 90vh;
+}
+
+.scroll-3-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+}
+
+.scroll-3-right-btm > p{
+    font-size: 1vw;
+    width: 18vw;
+    font-weight: 600;
+    text-align: right;
+}
+.scroll-3-right-top > img{
+    width: 18vw;
+}
+
+@media (max-width:768px) and (min-width:420px) {
+    .right-scroller-container{
+        width: 390vw;
+        gap:10vw;
+
+    }
+    .scroll-div-1{
+        width: 120vw;
+        padding: 0;
+    }
+    
+    .scroll-1-img{
+        align-self: flex-start;
+    }
+    .scroll-1-img > img{
+        width: 70vw;
+        height: auto;
+    }
+    .scroll-1-title{
+        font-size: 10vw;
+    }
+
+    .scroll-div-2{
+        width: 150vw;
+    }
+
+    .scroll-2-btm > h3{
+        font-size: 6vw;
+    }
+
+    .scroll-div-3{
+        width: 120vw;
+    }
+    .scroll-3-left>img{
+        width: 30vw;
+        height: auto;
+    }
+    .scroll-3-right-top>img{
+        width: 25vw;
+    }
+    .scroll-3-right-btm > p{
+        font-size: 2vw;
+        width: 30vw;
+    }
+}
+
+@media (max-width: 420px) {
+    .right-scroller-container{
+        width: calc(240vw + 140vh);
+    }
+    .scroll-1-bottom > img{
+        height: auto;
+        width: 40vw;
+    }
+    .scroll-1-img{
+        align-self: start;
+    }
+    .scroll-1-img > img{
+        width: 70vw;
+        height: auto;
+    }
+    .scroll-1-bottom{
+        position: relative;
+        width: 70vw;
+    }
+    .scroll-1-bottom > p{
+        position: absolute;
+        width: 70vw;
+        right: -50vw;
+    }
+
+    .scroll-div-2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .scroll-div-2{
+        width: 140vh;
+    }
+    .scroll-2-btm{
+        position: relative;
+    }
+
+    .scroll-2-btm > h3{
+        position: absolute;
+        /* left: 0; */
+        bottom: 0;
+        font-size: 5vw;
+        text-align: left;
+    }
+    .scroll-3-left > img{
+        width: 75vw;
+        height: auto;
+    }
+    .scroll-3-right-top>img{
+        width: 40vw;
+    }
+    .scroll-3-right-btm>p{
+        font-size: 3vw;
+        width: 50vw;
+    }
+}

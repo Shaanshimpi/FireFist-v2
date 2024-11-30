@@ -1,0 +1,174 @@
+
+.header{
+    height: 130vh;
+    /* background: url('./public/images/header-logo.jpg') no-repeat center center; */
+    /* background-color: rgba(233, 44, 44); */
+    background: url('../images/header-logo-2.jpg') no-repeat center center;
+    background: url('https://img.freepik.com/free-photo/sports-car-races-through-dark-blurred-motion-generative-ai_188544-12490.jpg?t=st=1730887621~exp=1730891221~hmac=de7ba0a78d72144cc8d8549a14578c23ff881ece4d6c366f436cb91463e85bd4&w=996') no-repeat center center;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    
+}
+
+
+.header-inner{
+    /* background-color: rgba(40, 60, 99, 0.719);
+    background-color: rgba(233, 44, 44, 0.425); */
+    /* background-color: rgba(var(--tertiary),0.55); */
+    background-color: rgba(0,0,0,0.55);
+    height: 100%;
+    position: relative;
+}
+
+.header-full{
+    position: relative;
+    height: 100vh;
+}
+
+.header-sec-text{
+    display: flex;
+    justify-content: space-around;
+    color: white ;
+
+    padding-top: 10px;
+    font-size: 1vw;
+}
+
+
+.head-title{
+    font-size: 23vw;
+    line-height: 20vw;
+    font-weight: 700;
+    text-align: center;
+    /* color: rgba(255, 255, 255, 0.507); */
+    color: #ffffff;
+    mix-blend-mode: difference;
+    position: absolute;
+    bottom: 0; 
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+
+}
+
+.subtitle{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+    word-spacing: -1px;
+    color: white;
+    margin-bottom: 50px;
+    margin-left: 2vw;
+}
+
+.header-mid-text{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-mid-text::before{
+    content: ' ';
+    width: 12vw;
+}
+
+.header-smalltext{
+    width: 35vh;
+    font-size: 1.7vh;
+    color: white;
+
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: -1%;
+    left: 0%;
+    /* color: white; */
+    color: rgb(var(--primary));
+    background-color: #000;
+    height: 30vh;
+    width: 50vw;
+    
+}
+
+
+
+.flick{
+    width: 60%;
+    margin: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* animation */
+.head-anim-text{
+    opacity: 0;
+}
+
+@media (max-width: 740px) {
+    .header-sec-text{
+        font-size: 1.8vw;
+    }
+   
+}
+@media (max-width: 440px) {
+    .header{
+        height: 120vh;
+    }
+    .header-full{
+        height: 90vh;
+    }
+    .head-title{
+        line-height: 32vw;
+        font-size: 42vw;
+        font-weight: 700;
+        padding-top: 40px;
+
+        transform: translate(0,50vh);
+        left: 0;
+    }
+
+    .header-fire::after,.header-fist::after, .solu::after{
+        content: '';
+        display: block;
+    }
+    .bottom-left{
+        width: 65vw;
+    }
+    .flick{
+        width: 80%;
+    }
+
+    .header-sec-text{
+        font-size: 3vw;
+    }
+    .header-smalltext{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 959px) {
+    .header{
+        position: relative;
+        overflow: hidden;
+        background:none;
+    }
+    .header::before {
+    background-image: url('https://img.freepik.com/free-photo/sports-car-races-through-dark-blurred-motion-generative-ai_188544-12490.jpg?t=st=1730887621~exp=1730891221~hmac=de7ba0a78d72144cc8d8549a14578c23ff881ece4d6c366f436cb91463e85bd4&w=996');
+    content: "";
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+}

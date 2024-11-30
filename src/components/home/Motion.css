@@ -1,0 +1,83 @@
+.motion{
+    height: 150vh;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+.motion-text-div{
+    font-size: 10vw;
+    padding: 1vw;
+}
+
+.motion-text-bottom{
+    display: flex;
+    justify-content: end;
+}
+
+.plus-div{
+    height: 10vw;
+    width: 10vw;
+    /* border: 1px solid white; */
+    position: relative;
+}
+
+.plus-div > div{
+    position:absolute;
+    background-color: white;
+}
+
+.plus-vert{
+    left:50%;
+    transform: translateX(-50%);
+    width: 3vw;
+    height: 10vw;
+}
+
+.plus-hori{
+    top:50%;
+    transform: translateY(-50%);
+    height: 3vw;
+    width: 10vw;
+
+}
+
+
+.missile{
+    height: 20vw;
+    /* position: absolute;
+    top:50%;
+    left:50%; */
+    scale: 0;
+}
+.explosion{
+    height: 0vw;
+    width: 0vw;
+    border-radius: 50%;
+    /* transform: translate(5vw,-150px); */
+    background-color: rgb(var(--primary)) !important;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%,50%);
+
+    opacity: 0.5;
+   
+}
+
+@media (max-width:420px){
+    .motion{
+        height: 100vh;
+    }
+    .motion-text-div{
+        font-size: 5vh;
+    }
+
+    .missile{
+        transform: translateX(-5vh);
+    }
+    .plus-div{
+        transform: translateX(-5vh);
+    }
+}
